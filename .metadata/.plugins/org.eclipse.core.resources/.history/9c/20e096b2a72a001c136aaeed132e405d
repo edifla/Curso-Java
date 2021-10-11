@@ -1,0 +1,24 @@
+package entitie;
+
+public class Operations {
+	private int numberOfAccount;
+	private String nameOfAccount;
+	public double initialDeposit;
+	
+	public Operations
+	
+	public int getNumberOfAccount() {
+		return numberOfAccount;
+	}
+	public void setNumberOfAccount(int numberOfAccount) {
+		this.numberOfAccount = numberOfAccount;
+	}
+	public String getNameOfAccount() {
+		return nameOfAccount;
+	}
+	public void setNameOfAccount(String nameOfAccount) {
+		this.nameOfAccount = nameOfAccount;
+	}
+	
+	
+}

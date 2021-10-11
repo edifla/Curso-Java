@@ -1,0 +1,46 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entitie.Operations;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.printf("Enter the account number:" );
+		int accountNumber = sc.nextInt();
+		System.out.printf("Enter the account holder:" );
+		String accountName = sc.next();
+		
+		System.out.printf("Is there an initial deposit? (y/n)");
+		String initialDepositConfirmation = sc.next();
+		
+		if(initialDepositConfirmation == "y") {
+			System.out.printf("Enter the initial deposit: ");
+			System.out.println();
+			double initialDeposit = sc.nextDouble();
+			Operations account = new Operations(accountNumber,accountName,initialDeposit);
+			System.out.println("Account data:");
+			System.out.printf("Account: " + account.getNumberOfAccount() 
+							 + ", Holder: " + account.getNameOfAccount()
+							 + ", Balance: " + account.getAccountSaldo());
+			
+		}else {
+			Operations account = new Operations(accountNumber,accountName);
+			System.out.println("Account data:");
+			System.out.printf("Account: " + account.getNumberOfAccount() 
+							 + ", Holder: " + account.getNameOfAccount()
+							 + ", Balance: " + account.getAccountSaldo());
+		}
+		
+		sc.close();
+		
+		
+	}
+
+}

@@ -1,0 +1,21 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.CurrencyConverter;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("The currency valor of dollar is: " + CurrencyConverter.dollar);
+		System.out.println("How many dollares do you want to buy?: ");
+		double valor = sc.nextDouble();
+		System.out.println("Amount to ber paid in reais: " + CurrencyConverter.converter(valor));
+		sc.close();
+	}
+
+}
