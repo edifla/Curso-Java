@@ -1,0 +1,40 @@
+package entitie;
+
+public class Operations {
+	private int numberOfAccount;
+	private String nameOfAccount;	
+	private double saldo;
+	
+	/* Construtores */
+	public Operations(int numberOfAccount, String nameOfAccount, double saldo){
+		this.numberOfAccount = numberOfAccount;
+		this.nameOfAccount = nameOfAccount;
+		this.saldo = saldo;
+	}
+	public Operations(int numberOfAccount, String nameOfAccount){
+		this.numberOfAccount = numberOfAccount;
+		this.nameOfAccount = nameOfAccount;
+	}
+	
+	/* Getters e Setters */
+	public String getNameOfAccount() {
+		return nameOfAccount;
+	}
+	public void setNameOfAccount(String nameOfAccount) {
+		this.nameOfAccount = nameOfAccount;
+	}
+	
+	public int getNumberOfAccount() {
+		return numberOfAccount;
+	}
+	
+    /* Metodos */
+	public double deposit(double valor) {
+		return saldo = saldo + valor;
+	}
+	
+	public double withdraw(double valor) {
+		return saldo = saldo - (valor + 5.00) ;
+	}
+	
+}

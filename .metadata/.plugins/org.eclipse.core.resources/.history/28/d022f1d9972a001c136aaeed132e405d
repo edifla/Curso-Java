@@ -1,0 +1,20 @@
+package entities;
+
+public class Student {
+	public double n1,n2,n3,end;
+	
+	public void media() {
+		end = n1 + n2 + n3;		
+	}
+	 
+	public String toString() {
+		
+		if (end >= 60) {
+			return "You pass";
+		}else {
+			double missing = 60 - end;
+			return "You don't pass%n"
+					+ "Missing " + missing + " points";
+		}
+	}
+}
